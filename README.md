@@ -1,4 +1,4 @@
-🚨 Suspicious Activity Detection System
+🚨 **Suspicious Activity Detection System**
 A real-time intelligent surveillance system that detects suspicious human behavior (e.g. shoplifting) using computer vision. It uses YOLO for object/keypoint detection and XGBoost for behavior classification. When suspicious activity is detected:
 
 ✅ An image and a 75-second video clip (30s before + 45s after) are uploaded to Cloudinary
