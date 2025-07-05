@@ -1,0 +1,165 @@
+/* Main Container */
+.page-container {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f7fa;
+}
+
+/* Settings Card */
+.settings {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Group Headings */
+.settings-group {
+  margin-bottom: 2.5rem;
+}
+
+.settings-group h3 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+/* Individual Setting Block */
+.setting-item {
+  margin-bottom: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.setting-item label {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--dark);
+  margin-bottom: 0.6rem;
+}
+
+/* Inputs */
+.setting-input,
+.setting-item input[type="email"],
+.setting-item input[type="tel"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.setting-input:focus {
+  border-color: var(--secondary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Toggle Switch */
+.setting-item input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+}
+
+/* Radio Buttons */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--light);
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.radio-group label:hover {
+  background: #e1f0fa;
+}
+
+/* Sensitivity Slider */
+.setting-item input[type="range"] {
+  width: 100%;
+  margin-top: 0.8rem;
+  appearance: none;
+  height: 6px;
+  background: var(--light-gray);
+  border-radius: 4px;
+  outline: none;
+}
+
+.setting-item input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--secondary);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Actions */
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-save {
+  background: var(--secondary);
+  color: white;
+  padding: 0.9rem 2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-save:hover {
+  background: #2980b9;
+}
+
+.btn-cancel {
+  background: var(--light-gray);
+  color: var(--dark);
+  padding: 0.9rem 2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-cancel:hover {
+  background: #dcdcdc;
+}
+
+/* Status Message */
+.status-msg {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2c3e50;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopSecure AI - Advanced shoplifting detection system with real-time monitoring and alerts">
+    <meta name="keywords" content="shoplifting detection, retail security, AI surveillance, loss prevention">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="author" content="ShopSecure AI Team">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="ShopSecure AI - Shoplifting Detection System">
+    <meta property="og:description" content="Advanced AI-powered security solution for retail stores">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shopsecure-ai.example.com">
+    <meta property="og:image" content="https://shopsecure-ai.example.com/social-preview.jpg">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ShopSecure AI - Shoplifting Detection System">
+    <meta name="twitter:description" content="Advanced AI-powered security solution for retail stores">
+    <meta name="twitter:image" content="https://shopsecure-ai.example.com/social-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Preconnect to important domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload important resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <title>ShopSecure AI | Shoplifting Detection System</title>
+    
+    <!-- Critical CSS -->
+    <style>
+        /* Critical CSS for initial load */
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #0f3460;
+            --accent: #e94560;
+            --light: #f4f4f9;
+            --dark: #16213e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            background-color: var(--primary);
+            color: var(--light);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        #root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loading-text {
+            position: absolute;
+            top: calc(50% + 40px);
+            color: var(--light);
+            font-size: 1.2rem;
+            text-align: center;
+            width: 100%;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Accessibility improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Focus styles */
+        :focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <!-- Loading animation -->
+    <div id="loading-screen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Initializing security system...</div>
+    </div>
+    
+    <!-- No JavaScript fallback -->
+    <noscript>
+        <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--primary); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10000; padding: 20px; text-align: center;">
+            <h1 style="color: var(--accent); margin-bottom: 20px;">JavaScript Required</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin-bottom: 30px;">
+                ShopSecure AI requires JavaScript to function properly. Please enable JavaScript in your browser settings to continue.
+            </p>
+            <a href="https://www.enable-javascript.com/" style="color: var(--accent); text-decoration: none; font-weight: bold; border: 2px solid var(--accent); padding: 10px 20px; border-radius: 5px;">
+                Learn How to Enable JavaScript
+            </a>
+        </div>
+    </noscript>
+    
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Remove loading screen when app loads -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('loading-screen').remove();
+                }, 500);
+            }, 1500); // Increased timeout for better UX
+        });
+        
+        // Fallback in case load event doesn't fire
+        setTimeout(function() {
+            if (document.getElementById('loading-screen')) {
+                document.getElementById('loading-screen').style.opacity = '0';
+                setTimeout(function() {
+                    if (document.getElementById('loading-screen')) {
+                        document.getElementById('loading-screen').remove();
+                    }
+                }, 500);
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

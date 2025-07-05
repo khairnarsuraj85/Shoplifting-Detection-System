@@ -1,0 +1,27 @@
+.main-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.row-two-columns {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.left-column,
+.right-column,
+.row-full {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .row-two-columns {
+    grid-template-columns: 1fr;
+  }
+}
